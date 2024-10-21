@@ -1,11 +1,14 @@
 
 
-stringToBeReturned = ""
 
-const repeatString = function(_greeting, numOfTimes) {
-    for( let greeting = 0; greeting < numOfTimes; greeting++){
-    return stringToBeReturned;
+
+const repeatString = function(greeting, numOfTimes) {
+    stringToBeReturned = ""
+    for( let i = 0; i < numOfTimes; i++){
+        
+        stringToBeReturned += greeting;
     }
+    return stringToBeReturned;
 };
 
 repeatString('hey', 3) // returns 'heyheyhey'
