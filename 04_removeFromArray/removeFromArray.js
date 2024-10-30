@@ -1,14 +1,14 @@
-const removeFromArray = function(arr, removed, removed2, removed3, removed4){
+const removeFromArray = function(arr, removed, removed2, removed3, removed4){ //parameters are placeholders for the values passed when the function is called.
     lengthOfArray = arr.length;
-    valuesInArray = arr.values();
-    const newArray = []
-    //for(let i = 1; i <= lengthOfArray; i++){
+
+    const newArray = [] // declares and initialises a new array with the name "newArray" where new elements will be added.
+    //The for loop below is different from the increment loop , this one iterates through the values inside the elements.
     for(let value of arr){
-        if (value !== removed  && value !== removed2 && value !== removed3  && value !== removed4){
-            newArray.push(value)
+        if (value !== removed  && value !== removed2 && value !== removed3  && value !== removed4){ //a strict operator was used "!==" , this does not do any conversions like the loose operator "==".
+            newArray.push(value)// adds the value into the new array.
         }
     }
-    return newArray
+    return newArray// returns the new array.
 };
 
 removeFromArray([1, 2, 3, 4], 3);
