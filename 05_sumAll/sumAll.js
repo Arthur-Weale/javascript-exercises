@@ -2,18 +2,21 @@
 
 const sumAll = function(start, end) {
     let finalSum = 0;
-    if(Number.isInteger(start) === false || Number.isNaN(end) === false || start < 1 ){
+    if(Number.isInteger(start) === false || Number.isInteger(end) === false || start < 1 ){
         return 'ERROR';
+
     }else if(start <= 1){ 
         for(let i = start; i <= end; i++ ){
             finalSum += i;
         }
-    }else if(start > 1){
-        for(let i = end; i <= start; i++ ){
+    }
+    else if(start > 1){
+        for(let i = start; i >= end; i-- ){
             finalSum += i;
         }
     }
     return finalSum;
+    //console.log(finalSum);
 };
 
 sumAll(1, 4)
