@@ -27,12 +27,13 @@ const power = function(value1,value2) {
 };
 
 const factorial = function(value1) {
-  let newValue = 1
-	arr = [];
-  arr.push(value1)
-  for(value in _Range(arr)){
-    newValue = newValue * value;
-  }
+  if (value1 == 0) {
+    return 1;
+  }else
+    newValue = value1;
+    for(let i = 1; i < value1; i++){
+      newValue = newValue * i;
+    }
   return newValue;
 };
 
