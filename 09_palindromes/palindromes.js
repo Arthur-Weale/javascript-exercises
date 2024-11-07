@@ -9,6 +9,5 @@ const palindromes = function (string){
             return false;
 };
 
-console.log(palindromes('A car, a man, a maraca.'));
 // Do not edit below this line
 module.exports = palindromes;
