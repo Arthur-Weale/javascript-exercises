@@ -1,24 +1,13 @@
-
-
-const books = [
-    {
-    title: 'Book',
-    author: 'Name'
-    },
-    {
-    title: 'Book2',
-    author: 'Name2'
-    }
-]
-
+//New array re-initialises a new array.
+let newArray = [];
+//Function to be called, contains block of code.
 const getTheTitles = function(books) {
-    for(aTitle of books){
-        bookTitle = aTitle.filter(title);
-        console.log(bookTitle);
-        //return bookTitle;
+    for(aTitle of books){//Iterates through elements in an array.
+        bookTitle = aTitle.title;
+        newArray.push(bookTitle);//Puts a title into New Array.
     }
-
+    return newArray;
 };
-getTheTitles(books)
+
 // Do not edit below this line
-//module.exports = getTheTitles;
+module.exports = getTheTitles;
