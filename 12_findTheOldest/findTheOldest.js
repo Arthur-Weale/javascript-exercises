@@ -16,21 +16,29 @@ const people = [
     },
 ]
 
+let oldestPersonObject = null
 let nameOfPerson = ''
-let currentOldestPerson = 0
-let recentOldestPerson = 0
 
 const findTheOldest = function(people) {
-    for(person of people){
-        nameOfPerson = people.name;
-        dateOfBirth = people.yearOfBirth;
-        dateOfDeath = people.yearOfDeath;
 
-        currentOldestPerson = dateOfBirth - dateOfDeath;
+    let currentOldestPerson = 0
+    let recentOldestPerson = 0
+    
+    for(person of people){
+        nameOfPerson = person.name;
+        dateOfBirth = person.yearOfBirth;
+        dateOfDeath = person.yearOfDeath;
+
+        currentOldestPerson = dateOfDeath - dateOfBirth;
+        //console.log(currentOldestPerson)
+        if(recentOldestPerson > currentOldestPerson){
+            currentOldestPerson = recentOldestPerson;
             console.log(currentOldestPerson);
+        }
     }
+    //console.log(`The oldest is : ${currentOldestPerson}`)
     }
 findTheOldest(people);
-console.log(person);
+console.log();
 // Do not edit below this line
 //module.exports = findTheOldest;
