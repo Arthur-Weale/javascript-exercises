@@ -18,7 +18,7 @@ const people = [
 
 let oldestPersonObject = null
 let nameOfPerson = ''
-const recentOldestPerson = 0
+let recentOldestPerson = 0
 
 const findTheOldest = function(people) {
 
@@ -27,19 +27,17 @@ const findTheOldest = function(people) {
         dateOfBirth = person.yearOfBirth;
         dateOfDeath = person.yearOfDeath;
 
-        const currentOldestPerson = dateOfDeath - dateOfBirth;
+        let currentOldestPerson = dateOfDeath - dateOfBirth;
             console.log(nameOfPerson);
             console.log(recentOldestPerson);
             console.log(currentOldestPerson);
 
-        if(currentOldestPerson < recentOldestPerson){
-            recentOldestPerson = currentOldestPerson;
-        }else if(currentOldestPerson > recentOldestPerson){
-
-        }
-        console.log(recentOldestPerson);
+        if(currentOldestPerson > recentOldestPerson){
+            currentOldestPerson = recentOldestPerson;
+            console.log(currentOldestPerson);
     }
-    console.log(`The oldest is : ${recentOldestPerson}`)
+}
+    //console.log(`The oldest is : ${recentOldestPerson}`)
     }
 findTheOldest(people);
 console.log();
