@@ -1,24 +1,8 @@
-// const people = [
-//     {
-//     name: "Carly",
-//     yearOfBirth: 2018,
-//     },
-//     {
-//     name: "Ray",
-//     yearOfBirth: 1962,
-//     yearOfDeath: 2011,
-//     },
-//     {
-//     name: "Jane",
-//     yearOfBirth: 1912,
-//     yearOfDeath: 1941,
-//     },
-// ]
 
-let oldestPersonObject = null
-let nameOfPerson = ''
-let recentOldestPerson = 0
-let  currentDate = new Date();
+let oldestPersonObject = null //This varible takes in an object.
+let nameOfPerson = '' //This variable is initialised to store a name. 
+let recentOldestPerson = 0 //Variable reinitialises the recent person age to zero.
+let  currentDate = new Date(); //Variable with the date method.
 
 const findTheOldest = function(people) {
 
@@ -27,26 +11,18 @@ const findTheOldest = function(people) {
         dateOfBirth = person.yearOfBirth;
         dateOfDeath = person.yearOfDeath;
 
-        if( dateOfDeath === undefined ){
-            dateOfDeath = currentDate.getFullYear();
+        if( dateOfDeath === undefined ){ //Compares if the date of death is not mentioned or non existent.
+            dateOfDeath = currentDate.getFullYear();// If the date of death is non existent it means that the person is still alive , hence it uses the current year.
         }
-            //console.log(dateOfDeath);
 
-        let currentOldestPerson = dateOfDeath - dateOfBirth;
-            // console.log(nameOfPerson);
-            // console.log(recentOldestPerson);
-            // console.log(currentOldestPerson);
+        let currentOldestPerson = dateOfDeath - dateOfBirth;//Performs logical calculations to calculate the oldest from the date of birth from the date of death.
 
-        if(currentOldestPerson > recentOldestPerson){
-            recentOldestPerson = currentOldestPerson;
-            oldestPersonObject = person;
+        if(currentOldestPerson > recentOldestPerson){ //Perfoms comparison as to if the current oldest person is older than recent person.
+            recentOldestPerson = currentOldestPerson;// If so , then the current oldest person is redeclared to be the recent oldest person.
+            oldestPersonObject = person;// Retrieves the current person object.
     }
 }
-    // console.log(`The oldest is : ${recentOldestPerson}`)
-    // console.log(oldestPersonObject);
-    return oldestPersonObject;
+    return oldestPersonObject; //returns object.
     }
-//findTheOldest(people);
-//console.log();
 // Do not edit below this line
 module.exports = findTheOldest;
