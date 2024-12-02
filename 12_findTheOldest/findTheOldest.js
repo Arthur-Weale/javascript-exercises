@@ -33,8 +33,8 @@ const findTheOldest = function(people) {
             console.log(currentOldestPerson);
 
         if(currentOldestPerson > recentOldestPerson){
-            currentOldestPerson = recentOldestPerson;
-            console.log(currentOldestPerson);
+            recentOldestPerson = currentOldestPerson;
+            //console.log(currentOldestPerson);
     }
 }
     //console.log(`The oldest is : ${recentOldestPerson}`)
