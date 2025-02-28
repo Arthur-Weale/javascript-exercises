@@ -7,19 +7,25 @@ const subtract = function(value1,value2) {
 };
 
 const sum = function(arr) {
-  let runningTotal = 0;//Re-initialises the running total varible to zero.
-	for(value of arr){ //Loop iterates through the elements in the array using for...of type array.
-    runningTotal = runningTotal + value;//Adds running total to value.
-  }
-  return runningTotal;// returns updated running total.
+  //let runningTotal = 0;//Re-initialises the running total varible to zero.
+	//for(value of arr){ //Loop iterates through the elements in the array using for...of type array.
+  //  runningTotal = runningTotal + value;//Adds running total to value.
+  //}
+  //return runningTotal;// returns updated running total.
+  return arr.reduce((runningTotal, currentValue) => 
+    runningTotal + currentValue
+  ,0)
 };
 
 const multiply = function(arr) {
-  let runningMultiple = 1;//Re-initialises the running multiple to 1.
-  for(value of arr){//Loop iterates through the elements in the array.
-    runningMultiple = runningMultiple * value;//Performs multiplying mathematical process using the astericks operater *.
-  };
-  return runningMultiple;//Returns updated running Multiple variable.
+  //let runningMultiple = 1;//Re-initialises the running multiple to 1.
+  //for(value of arr){//Loop iterates through the elements in the array.
+  //  runningMultiple = runningMultiple * value;//Performs multiplying mathematical process using the astericks operater *.
+  //};
+  //return runningMultiple;//Returns updated running Multiple variable.
+  return arr.reduce((runningTotal, currentValue) => 
+    runningTotal * currentValue
+  ,1)
 };
 
 const power = function(value1,value2) {
